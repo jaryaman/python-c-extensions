@@ -1,5 +1,5 @@
 # python-c-extensions
-Demonstrations of creating and accessing C extensions from python
+Demonstrations of creating and accessing C extensions from python. Based on The Python Cookbook, Beazley 2011.
 
 ## Installation of gcc on Windows
 To install gcc on Windows, see
