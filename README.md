@@ -18,8 +18,8 @@ On Linux, run
 ./setup_library_linux.bat
 ```
 
-After you've built the C code, you're ready to run
+After you've built the C code, you're ready to run (from outside the directory above the repo)
 ```
-python sample.py
+python python-c-extensions
 ```
 from your favourite console
