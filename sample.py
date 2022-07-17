@@ -12,7 +12,7 @@ here = Path(__file__)
 if platform.system() == 'Windows':
     _mod = ctypes.WinDLL(str(here.parent/'sample.dll'))
 elif platform.system() == 'Linux':
-    _mod = ctypes.cdll.LoadLibrary(str(here.parent/'sample.so'))
+    _mod = ctypes.cdll.LoadLibrary(str(here.parent/'_sample.so'))
 else:
     raise OSError(f'OS {platform.system()} not supported')
 

@@ -15,7 +15,7 @@ On Windows, run from a powershell
 
 On Linux, run
 ```
-./setup_library_linux.bat
+./setup_library_linux.sh
 ```
 
 After you've built the C code, you're ready to run (from outside the directory above the repo)
