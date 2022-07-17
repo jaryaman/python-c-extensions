@@ -1,4 +1,7 @@
 .idea
-*.dll
-*.o
-*.so
+**/*.dll
+**/*.o
+**/*.so
+**/build
+**/dist
+**/*.egg-info
