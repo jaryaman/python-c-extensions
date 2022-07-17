@@ -4,7 +4,7 @@ setup(
     name='sample',
     ext_modules=[
         Extension('sample',
-                  ['bind.c', 'pysample.c']
+                  ['pysample.c']
                   )
     ]
 )

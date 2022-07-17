@@ -1,5 +1,4 @@
 #include <math.h>
-#include "sample.h"
 
 /* Compute the greatest common divisor */
 int gcd(int x, int y) {
@@ -30,6 +29,13 @@ int divide(int a, int b, int *remainder) {
 	int quot = a / b;
 	*remainder = a % b;
 	return quot;
+}
+
+/* Multiply two integers*/
+int multiply(int a, int b) {
+    int ab;
+    ab = a * b;
+    return ab;
 }
 
 /* Average values in an array */

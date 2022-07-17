@@ -37,11 +37,22 @@ static PyObject *py_divide(PyObject *self, PyObject *args) {
     return Py_BuildValue("(ii)", quotient, remainder);
 }
 
+/* int multiply(int, int) */
+static PyObject *py_multiply(PyObject *self, PyObject *args) {
+    int a, b, ab;
+    if (!PyArg_ParseTuple(args, "ii", &a, &b)) {
+        return NULL;
+    }
+    ab = multiply(a, b);
+    return Py_BuildValue("i", ab);
+}
+
 /* Module method table */
 static PyMethodDef SampleMethods[] = {
     {"gcd", py_gcd, METH_VARARGS, "Greatest common divisor"},
     {"in_mandel", py_in_mandel, METH_VARARGS, "Mandelbrot test"},
     {"divide", py_divide, METH_VARARGS, "Integer division"},
+    {"multiply", py_multiply, METH_VARARGS, "Integer multiplication"},
     {NULL, NULL, 0, NULL}
 };
 
@@ -53,3 +64,9 @@ static struct PyModuleDef samplemodule = {
     -1,                 /* Size of per-interpreter state, or -1 */
     SampleMethods      /* Method table */
 };
+
+/* Module initialization function */
+PyMODINIT_FUNC
+PyInit_sample(void) {
+    return PyModule_Create(&samplemodule);
+}
