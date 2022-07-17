@@ -1,4 +1,5 @@
-#include "python3.8/Python.h"
+#include <stdio.h>
+#include <Python.h>
 #include "sample.h"
 
 /* int gcd(int, int) */
@@ -52,9 +53,3 @@ static struct PyModuleDef samplemodule = {
     -1,                 /* Size of per-interpreter state, or -1 */
     SampleMethods      /* Method table */
 };
-
-/* Module initialization function */
-PyMODINIT_FUNC
-PyInit_sample(void) {
-    return PyModule_Create(&samplemodule);
-}

@@ -10,9 +10,9 @@ from pathlib import Path
 here = Path(__file__)
 
 if platform.system() == 'Windows':
-    _mod = ctypes.WinDLL(str(here.parent.parent/'c/sample.dll'))
+    _mod = ctypes.WinDLL(str(here.parent/'sample.dll'))
 elif platform.system() == 'Linux':
-    _mod = ctypes.cdll.LoadLibrary(str(here.parent.parent/'c/sample.so'))
+    _mod = ctypes.cdll.LoadLibrary(str(here.parent/'sample.so'))
 else:
     raise OSError(f'OS {platform.system()} not supported')
 
@@ -40,7 +40,6 @@ def divide(x, y):
 
 class DoubleArrayType:
     def from_param(self, param):
-        # Depending on the input type, a different specialized method will be called to handle the python data type
         type_name = type(param).__name__
         if hasattr(self, 'from_' + type_name):
             return getattr(self, 'from_' + type_name)(param)

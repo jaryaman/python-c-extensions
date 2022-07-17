@@ -4,12 +4,7 @@ setup(
     name='sample',
     ext_modules=[
         Extension('sample',
-                  ['pysample.c'],
-                  include_dirs=['.'],
-                  define_macros=[('FOO', '1')],
-                  undef_macros=['BAR'],
-                  library_dirs=['/usr/local/lib'],
-                  libraries=['sample']
+                  ['bind.c', 'pysample.c']
                   )
     ]
 )
