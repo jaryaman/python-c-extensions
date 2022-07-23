@@ -5,3 +5,7 @@
 **/build
 **/dist
 **/*.egg-info
+
+
+03-cython/*.c
+03-cython/*.pyd
