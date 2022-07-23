@@ -54,4 +54,3 @@ static PyObject *py_distance(PyObject *self, PyObject *args) {
     result = distance(p1,p2);
     return Py_BuildValue("d", result);
 }
-
